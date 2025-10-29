@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.svg";
@@ -6,6 +7,7 @@ import logo from "@/assets/logo.svg";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,14 +17,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsMobileMenuOpen(false);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -37,45 +32,51 @@ const Navbar = () => {
       <div className="container-custom px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button 
-            onClick={scrollToTop}
+          <Link 
+            to="/"
             className="hover:opacity-80 transition-opacity flex items-center gap-3"
           >
             <img src={logo} alt="Natural Look Logo" className="h-12 w-auto" />
             <span className="text-xl font-bold text-foreground hidden lg:block">Natural Look</span>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <button 
-              onClick={() => scrollToSection('services')} 
-              className="text-foreground hover:text-primary transition-colors font-medium"
+            <Link 
+              to="/about"
+              className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/about' ? 'text-primary' : ''}`}
+            >
+              About
+            </Link>
+            <Link 
+              to="/services"
+              className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/services' ? 'text-primary' : ''}`}
             >
               Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('portfolio')} 
-              className="text-foreground hover:text-primary transition-colors font-medium"
+            </Link>
+            <Link 
+              to="/portfolio"
+              className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/portfolio' ? 'text-primary' : ''}`}
             >
               Portfolio
-            </button>
-            <button 
-              onClick={() => scrollToSection('products')} 
-              className="text-foreground hover:text-primary transition-colors font-medium"
+            </Link>
+            <Link 
+              to="/products"
+              className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/products' ? 'text-primary' : ''}`}
             >
               Products
-            </button>
-            <button 
-              onClick={() => scrollToSection('pricing')} 
-              className="text-foreground hover:text-primary transition-colors font-medium"
+            </Link>
+            <Link 
+              to="/pricing"
+              className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/pricing' ? 'text-primary' : ''}`}
             >
               Pricing
-            </button>
+            </Link>
             <Button 
               variant="hero" 
-              onClick={() => scrollToSection('contact')}
+              asChild
             >
-              Book Consultation
+              <Link to="/contact">Book Consultation</Link>
             </Button>
           </div>
 
@@ -92,36 +93,47 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
-            <button 
-              onClick={() => scrollToSection('services')} 
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            <Link 
+              to="/about"
+              onClick={closeMobileMenu}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/about' ? 'text-primary' : ''}`}
+            >
+              About
+            </Link>
+            <Link 
+              to="/services"
+              onClick={closeMobileMenu}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/services' ? 'text-primary' : ''}`}
             >
               Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('portfolio')} 
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            </Link>
+            <Link 
+              to="/portfolio"
+              onClick={closeMobileMenu}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/portfolio' ? 'text-primary' : ''}`}
             >
               Portfolio
-            </button>
-            <button 
-              onClick={() => scrollToSection('products')} 
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            </Link>
+            <Link 
+              to="/products"
+              onClick={closeMobileMenu}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/products' ? 'text-primary' : ''}`}
             >
               Products
-            </button>
-            <button 
-              onClick={() => scrollToSection('pricing')} 
-              className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium"
+            </Link>
+            <Link 
+              to="/pricing"
+              onClick={closeMobileMenu}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/pricing' ? 'text-primary' : ''}`}
             >
               Pricing
-            </button>
+            </Link>
             <Button 
               variant="hero" 
-              onClick={() => scrollToSection('contact')}
+              asChild
               className="w-full"
             >
-              Book Consultation
+              <Link to="/contact" onClick={closeMobileMenu}>Book Consultation</Link>
             </Button>
           </div>
         )}

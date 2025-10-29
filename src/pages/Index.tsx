@@ -1,30 +1,23 @@
+import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
-import Services from "@/components/Services";
-import Process from "@/components/Process";
-import Portfolio from "@/components/Portfolio";
-import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing";
-import Products from "@/components/Products";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <AboutUs />
-      <Services />
-      <Process />
-      <Portfolio />
-      <Testimonials />
-      <Pricing />
-      <Products />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <Helmet>
+        <title>Natural Look | Professional Hair Replacement San Francisco</title>
+        <meta name="description" content="Natural Look offers premium non-surgical hair replacement services in San Francisco. Custom hair systems, expert styling, and 35+ years of experience restoring confidence." />
+      </Helmet>
+      <div className="min-h-screen">
+        <Navbar />
+        <Hero />
+        <AboutUs />
+        <Footer />
+      </div>
+    </>
   );
 };
 
