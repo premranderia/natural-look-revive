@@ -27,7 +27,7 @@ const Hero = () => {
             Confidence. Restored <span className="text-accent">Naturally.</span>
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-light">
-            Custom, undetectable hair systems made to fit your lifestyle — serving Hayward with excellence for over 35 years.
+            Custom, undetectable hair systems for men and women — serving Hayward with excellence for over 35 years.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button 

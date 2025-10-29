@@ -42,7 +42,7 @@ const Services = () => {
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive hair replacement solutions tailored to your unique needs
+            Comprehensive hair replacement solutions for men and women, tailored to your unique needs
           </p>
         </div>
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,9 +39,10 @@ const Navbar = () => {
           {/* Logo */}
           <button 
             onClick={scrollToTop}
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+            className="hover:opacity-80 transition-opacity flex items-center gap-3"
           >
-            Natural Look
+            <img src={logo} alt="Natural Look Logo" className="h-12 w-auto" />
+            <span className="text-xl font-bold text-foreground hidden lg:block">Natural Look</span>
           </button>
 
           {/* Desktop Navigation */}
