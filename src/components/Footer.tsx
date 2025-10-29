@@ -77,10 +77,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-lg mb-4">Contact</h4>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li>22623 Vermont St, Hayward, CA 94545</li>
+              <li>24700 Calaroga Ave UNIT 105, Hayward, CA 94545</li>
               <li>
-                <a href="tel:+15107278424" className="hover:text-accent transition-colors">
-                  (510) 727-8424
+                <a href="tel:+15107849999" className="hover:text-accent transition-colors">
+                  (510) 784-9999
                 </a>
               </li>
               <li>

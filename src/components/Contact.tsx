@@ -105,7 +105,7 @@ const Contact = () => {
                     Request Consultation
                   </Button>
                   <Button type="button" variant="accent" asChild className="flex-1">
-                    <a href="tel:+15107278424">Call Now</a>
+                    <a href="tel:+15107849999">Call Now</a>
                   </Button>
                 </div>
               </form>
@@ -122,7 +122,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg text-foreground mb-1">Visit Our Studio</h3>
                   <p className="text-muted-foreground">
-                    22623 Vermont St<br />
+                    24700 Calaroga Ave UNIT 105<br />
                     Hayward, CA 94545
                   </p>
                 </div>
@@ -137,10 +137,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg text-foreground mb-1">Call Us</h3>
                   <a 
-                    href="tel:+15107278424" 
+                    href="tel:+15107849999" 
                     className="text-muted-foreground hover:text-primary transition-colors text-lg"
                   >
-                    (510) 727-8424
+                    (510) 784-9999
                   </a>
                 </div>
               </CardContent>
@@ -182,7 +182,7 @@ const Contact = () => {
             {/* Google Map */}
             <div className="rounded-2xl overflow-hidden shadow-xl h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.6777777777777!2d-122.08!3d37.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDM5JzAwLjAiTiAxMjLCsDA0JzQ4LjAiVw!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.234!2d-122.0681!3d37.6598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f93cf62d5e54f%3A0x5e5e5e5e5e5e5e5e!2s24700%20Calaroga%20Ave%20UNIT%20105%2C%20Hayward%2C%20CA%2094545!5e0!3m2!1sen!2sus!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

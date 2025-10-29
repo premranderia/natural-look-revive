@@ -50,7 +50,7 @@ const Hero = () => {
           </div>
           <div className="mt-12 flex items-center justify-center lg:justify-start gap-4 text-primary-foreground/80">
             <Phone className="h-5 w-5" />
-            <span className="text-lg">Call us: <a href="tel:+15107278424" className="font-semibold hover:text-accent transition-colors">(510) 727-8424</a></span>
+            <span className="text-lg">Call us: <a href="tel:+15107849999" className="font-semibold hover:text-accent transition-colors">(510) 784-9999</a></span>
           </div>
         </div>
       </div>
