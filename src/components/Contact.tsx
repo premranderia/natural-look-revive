@@ -154,10 +154,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-lg text-foreground mb-1">Email Us</h3>
                   <a 
-                    href="mailto:info@naturallookinc.com" 
+                    href="mailto:naturallookinc@gmail.com" 
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    info@naturallookinc.com
+                    naturallookinc@gmail.com
                   </a>
                 </div>
               </CardContent>
