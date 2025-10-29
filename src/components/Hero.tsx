@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-confidence.jpg";
 
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -33,19 +30,23 @@ const Hero = () => {
             <Button 
               variant="hero" 
               size="lg"
-              onClick={() => scrollToSection('contact')}
+              asChild
               className="text-lg"
             >
-              Book a Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <Link to="/contact">
+                Book a Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
             <Button 
               variant="accent" 
               size="lg"
-              onClick={() => scrollToSection('portfolio')}
+              asChild
               className="text-lg"
             >
-              See Real Results
+              <Link to="/portfolio">
+                See Real Results
+              </Link>
             </Button>
           </div>
           <div className="mt-12 flex items-center justify-center lg:justify-start gap-4 text-primary-foreground/80">

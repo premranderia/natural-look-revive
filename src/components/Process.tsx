@@ -1,12 +1,9 @@
 import { MessageSquare, Ruler, Scissors } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 
 const Process = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const steps = [
     {
@@ -78,12 +75,14 @@ const Process = () => {
 
         <div className="text-center animate-fade-in" style={{ animationDelay: '450ms' }}>
           <Button 
-            onClick={scrollToContact}
             size="lg"
             variant="hero"
             className="px-8"
+            asChild
           >
-            Book a Consultation
+            <Link to="/contact">
+              Book a Consultation
+            </Link>
           </Button>
         </div>
       </div>
