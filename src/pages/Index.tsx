@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,7 +13,6 @@ const Index = () => {
       <div className="min-h-screen">
         <Navbar />
         <Hero />
-        <AboutUs />
         <Footer />
       </div>
     </>
