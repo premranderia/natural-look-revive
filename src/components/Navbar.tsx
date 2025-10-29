@@ -43,12 +43,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link 
-              to="/about"
-              className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/about' ? 'text-primary' : ''}`}
-            >
-              About
-            </Link>
-            <Link 
               to="/services"
               className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/services' ? 'text-primary' : ''}`}
             >
@@ -72,6 +66,12 @@ const Navbar = () => {
             >
               Pricing
             </Link>
+            <Link 
+              to="/about"
+              className={`text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/about' ? 'text-primary' : ''}`}
+            >
+              About Us
+            </Link>
             <Button 
               variant="hero" 
               asChild
@@ -93,13 +93,6 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
-            <Link 
-              to="/about"
-              onClick={closeMobileMenu}
-              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/about' ? 'text-primary' : ''}`}
-            >
-              About
-            </Link>
             <Link 
               to="/services"
               onClick={closeMobileMenu}
@@ -127,6 +120,13 @@ const Navbar = () => {
               className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/pricing' ? 'text-primary' : ''}`}
             >
               Pricing
+            </Link>
+            <Link 
+              to="/about"
+              onClick={closeMobileMenu}
+              className={`block w-full text-left py-2 text-foreground hover:text-primary transition-colors font-medium ${location.pathname === '/about' ? 'text-primary' : ''}`}
+            >
+              About Us
             </Link>
             <Button 
               variant="hero" 
