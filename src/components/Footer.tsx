@@ -1,4 +1,5 @@
 import { Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -90,6 +91,14 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/60">
+          <div className="flex justify-center gap-6 mb-4">
+            <Link to="/terms" className="hover:text-accent transition-colors">
+              Terms & Conditions
+            </Link>
+            <Link to="/privacy" className="hover:text-accent transition-colors">
+              Privacy Policy
+            </Link>
+          </div>
           <p>&copy; 2025 Natural Look. All rights reserved.</p>
         </div>
       </div>
