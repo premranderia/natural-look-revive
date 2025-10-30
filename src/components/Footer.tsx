@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">Natural Look</h3>
             <p className="text-primary-foreground/80 mb-4">
-              Serving Hayward with premium hair replacement solutions for over 35 years.
+              Serving San Francisco with premium hair replacement solutions for over 35 years.
             </p>
             <div className="flex gap-4">
               <a 
