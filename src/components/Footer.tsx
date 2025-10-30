@@ -99,7 +99,7 @@ const Footer = () => {
               Privacy Policy
             </Link>
           </div>
-          <p>&copy; 2025 Natural Look. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Natural Look. All rights reserved.</p>
         </div>
       </div>
     </footer>
