@@ -3,7 +3,7 @@ FROM node:22-alpine AS builder
 WORKDIR /src
 
 # Copy monorepo setup files
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json ./
+COPY package.json pnpm-lock.yaml turbo.json ./
 
 # Install pnpm
 RUN npm install -g pnpm
