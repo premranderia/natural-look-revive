@@ -1,16 +1,7 @@
 import { Facebook, Instagram } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const navigate = useNavigate();
-  
-  const scrollToSection = (id: string) => {
-    navigate('/', { replace: false });
-    setTimeout(() => {
-      const element = document.getElementById(id);
-      element?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  };
 
   return (
     <footer className="bg-navy text-primary-foreground">
@@ -49,29 +40,29 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 text-primary-foreground/80">
               <li>
-                <button onClick={() => scrollToSection('services')} className="hover:text-accent transition-colors">
+                <Link to="/services" className="hover:text-accent transition-colors">
                   Services
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('portfolio')} className="hover:text-accent transition-colors">
+                <Link to="/portfolio" className="hover:text-accent transition-colors">
                   Portfolio
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('products')} className="hover:text-accent transition-colors">
+                <Link to="/products" className="hover:text-accent transition-colors">
                   Products
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('pricing')} className="hover:text-accent transition-colors">
+                <Link to="/pricing" className="hover:text-accent transition-colors">
                   Pricing
-                </button>
+                </Link>
               </li>
               <li>
-                <button onClick={() => scrollToSection('contact')} className="hover:text-accent transition-colors">
+                <Link to="/contact" className="hover:text-accent transition-colors">
                   Contact
-                </button>
+                </Link>
               </li>
             </ul>
           </div>
