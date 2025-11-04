@@ -4,6 +4,14 @@ import before3 from "@/assets/before-3.jpg";
 import after1 from "@/assets/after-1.jpg";
 import after2 from "@/assets/after-2.jpg";
 import after3 from "@/assets/after-3.jpg";
+import before4 from "@/assets/before-4.jpg";
+import before5 from "@/assets/before-5.jpg";
+import after4 from "@/assets/after-4.jpg";
+import after5 from "@/assets/after-5.jpg";
+import before6 from "@/assets/before-6.jpg";
+import after6 from "@/assets/after-6.jpg";
+import before7 from "@/assets/before-7.jpg";
+import after7 from "@/assets/after-7.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -17,6 +25,21 @@ const Portfolio = () => {
     {
       beforeImages: [before1, before2, before3],
       afterImages: [after1, after2, after3],
+      category: "Men's Hair System"
+    },
+    {
+      beforeImages: [before4, before5],
+      afterImages: [after4, after5],
+      category: "Men's Hair System"
+    },
+    {
+      beforeImages: [before6],
+      afterImages: [after6],
+      category: "Men's Hair System"
+    },
+    {
+      beforeImages: [before7],
+      afterImages: [after7],
       category: "Men's Hair System"
     },
   ];
