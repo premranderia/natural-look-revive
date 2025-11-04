@@ -1,7 +1,9 @@
-import beforeAfterMan1 from "@/assets/before-after-man-1.jpg";
-import beforeAfterMan2 from "@/assets/before-after-man-2.jpg";
-import beforeAfterWoman1 from "@/assets/before-after-woman-1.jpg";
-import beforeAfterWoman2 from "@/assets/before-after-woman-2.jpg";
+import before1 from "@/assets/before-1.jpg";
+import before2 from "@/assets/before-2.jpg";
+import before3 from "@/assets/before-3.jpg";
+import after1 from "@/assets/after-1.jpg";
+import after2 from "@/assets/after-2.jpg";
+import after3 from "@/assets/after-3.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -13,24 +15,9 @@ import {
 const Portfolio = () => {
   const transformations = [
     {
-      image: beforeAfterMan1,
-      alt: "Before and after hair replacement transformation for man - showing natural-looking results",
+      beforeImages: [before1, before2, before3],
+      afterImages: [after1, after2, after3],
       category: "Men's Hair System"
-    },
-    {
-      image: beforeAfterMan2,
-      alt: "Before and after custom hair system for mature man - professional transformation",
-      category: "Men's Hair System"
-    },
-    {
-      image: beforeAfterWoman1,
-      alt: "Before and after hair replacement for woman - natural volume restoration",
-      category: "Women's Hair System"
-    },
-    {
-      image: beforeAfterWoman2,
-      alt: "Before and after custom hair system for woman - elegant transformation",
-      category: "Women's Hair System"
     },
   ];
 
@@ -51,31 +38,52 @@ const Portfolio = () => {
               <CarouselContent>
                 {transformations.map((transformation, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
-                      <div className="relative">
-                        <img 
-                          src={transformation.image} 
-                          alt={transformation.alt} 
-                          className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                        {/* Before/After Labels */}
-                        <div className="absolute top-4 left-4 right-4 flex justify-between pointer-events-none">
-                          <div className="bg-background/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {/* Before Section */}
+                      <div className="relative group overflow-hidden rounded-2xl shadow-2xl bg-card">
+                        <div className="p-4">
+                          <div className="bg-muted/50 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg mb-4 inline-block">
                             <span className="text-sm font-semibold text-foreground uppercase tracking-wide">Before</span>
                           </div>
-                          <div className="bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg">
-                            <span className="text-sm font-semibold text-primary-foreground uppercase tracking-wide">After</span>
-                          </div>
-                        </div>
-                        {/* Category Badge */}
-                        <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-                          <div className="bg-background/90 backdrop-blur-sm px-6 py-2 rounded-full shadow-lg">
-                            <span className="text-sm font-medium text-foreground">{transformation.category}</span>
+                          <div className="grid grid-cols-1 gap-4">
+                            {transformation.beforeImages.map((image, imgIndex) => (
+                              <div key={imgIndex} className="relative overflow-hidden rounded-lg">
+                                <img 
+                                  src={image} 
+                                  alt={`Before transformation view ${imgIndex + 1} - hair replacement client`}
+                                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                            ))}
                           </div>
                         </div>
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8">
-                        <span className="text-primary-foreground text-xl font-semibold">Real Client Transformation</span>
+
+                      {/* After Section */}
+                      <div className="relative group overflow-hidden rounded-2xl shadow-2xl bg-card">
+                        <div className="p-4">
+                          <div className="bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg mb-4 inline-block">
+                            <span className="text-sm font-semibold text-primary-foreground uppercase tracking-wide">After</span>
+                          </div>
+                          <div className="grid grid-cols-1 gap-4">
+                            {transformation.afterImages.map((image, imgIndex) => (
+                              <div key={imgIndex} className="relative overflow-hidden rounded-lg">
+                                <img 
+                                  src={image} 
+                                  alt={`After transformation view ${imgIndex + 1} - natural hair system results`}
+                                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Category Badge */}
+                    <div className="text-center mt-6">
+                      <div className="bg-card px-6 py-2 rounded-full shadow-lg inline-block">
+                        <span className="text-sm font-medium text-foreground">{transformation.category}</span>
                       </div>
                     </div>
                   </CarouselItem>
