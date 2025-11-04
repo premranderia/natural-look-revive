@@ -40,7 +40,7 @@ const Portfolio = () => {
     {
       beforeImages: [before7],
       afterImages: [after7],
-      category: "Men's Hair System"
+      category: "Women's Hair System"
     },
   ];
 
