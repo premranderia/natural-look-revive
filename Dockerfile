@@ -27,7 +27,7 @@ RUN apk add --no-cache gettext curl
 COPY --from=builder /src/dist /usr/share/nginx/html
 
 # Copy nginx template
-COPY src/nginx.template.conf /etc/nginx/templates/default.conf.template
+COPY nginx.template.conf /etc/nginx/templates/default.conf.template
 
 # Expose port
 EXPOSE 80
