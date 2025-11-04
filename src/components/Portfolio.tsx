@@ -61,40 +61,44 @@ const Portfolio = () => {
               <CarouselContent>
                 {transformations.map((transformation, index) => (
                   <CarouselItem key={index}>
-                    <div className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                       {/* Before Section */}
-                      <div className="relative overflow-hidden rounded-xl shadow-lg bg-card p-4">
-                        <div className="bg-muted/50 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-md mb-3 inline-block">
-                          <span className="text-xs font-semibold text-foreground uppercase tracking-wide">Before</span>
-                        </div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                          {transformation.beforeImages.map((image, imgIndex) => (
-                            <div key={imgIndex} className="relative overflow-hidden rounded-lg aspect-square group">
-                              <img 
-                                src={image} 
-                                alt={`Before transformation view ${imgIndex + 1} - hair replacement client`}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                              />
-                            </div>
-                          ))}
+                      <div className="relative group overflow-hidden rounded-xl shadow-lg bg-card">
+                        <div className="p-3">
+                          <div className="bg-muted/50 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-md mb-3 inline-block">
+                            <span className="text-xs font-semibold text-foreground uppercase tracking-wide">Before</span>
+                          </div>
+                          <div className="grid grid-cols-1 gap-2">
+                            {transformation.beforeImages.map((image, imgIndex) => (
+                              <div key={imgIndex} className="relative overflow-hidden rounded-lg">
+                                <img 
+                                  src={image} 
+                                  alt={`Before transformation view ${imgIndex + 1} - hair replacement client`}
+                                  className="w-full h-32 md:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
 
                       {/* After Section */}
-                      <div className="relative overflow-hidden rounded-xl shadow-lg bg-card p-4">
-                        <div className="bg-primary/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-md mb-3 inline-block">
-                          <span className="text-xs font-semibold text-primary-foreground uppercase tracking-wide">After</span>
-                        </div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                          {transformation.afterImages.map((image, imgIndex) => (
-                            <div key={imgIndex} className="relative overflow-hidden rounded-lg aspect-square group">
-                              <img 
-                                src={image} 
-                                alt={`After transformation view ${imgIndex + 1} - natural hair system results`}
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                              />
-                            </div>
-                          ))}
+                      <div className="relative group overflow-hidden rounded-xl shadow-lg bg-card">
+                        <div className="p-3">
+                          <div className="bg-primary/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-md mb-3 inline-block">
+                            <span className="text-xs font-semibold text-primary-foreground uppercase tracking-wide">After</span>
+                          </div>
+                          <div className="grid grid-cols-1 gap-2">
+                            {transformation.afterImages.map((image, imgIndex) => (
+                              <div key={imgIndex} className="relative overflow-hidden rounded-lg">
+                                <img 
+                                  src={image} 
+                                  alt={`After transformation view ${imgIndex + 1} - natural hair system results`}
+                                  className="w-full h-32 md:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
