@@ -1,9 +1,9 @@
 # --- Build Stage ---
 FROM node:22-alpine AS builder
-WORKDIR /src
+WORKDIR /app
 
-# Copy monorepo setup files
-COPY package.json pnpm-lock.yaml turbo.json ./
+# Copy dependency files
+COPY package.json pnpm-lock.yaml ./
 
 # Install pnpm
 RUN npm install -g pnpm
@@ -11,10 +11,10 @@ RUN npm install -g pnpm
 # Install dependencies
 RUN pnpm install --frozen-lockfile
 
-# Copy source code
-COPY src/ ./src/
+# Copy the rest of the app
+COPY . .
 
-# Build the app with environment variables available
+# Build the app
 RUN pnpm build
 
 # --- Runtime Stage ---
@@ -23,8 +23,8 @@ FROM nginx:alpine
 # Install curl for health checks and gettext for envsubst
 RUN apk add --no-cache gettext curl
 
-# Copy built application
-COPY --from=builder /src/dist /usr/share/nginx/html
+# Copy built application to nginx html directory
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copy nginx template
 COPY nginx.template.conf /etc/nginx/templates/default.conf.template
