@@ -19,6 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Portfolio = () => {
   const transformations = [
@@ -57,7 +58,16 @@ const Portfolio = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 gap-8">
             {/* Before/After Carousel */}
-            <Carousel className="w-full" opts={{ loop: true }}>
+            <Carousel
+              className="w-full"
+              opts={{ loop: true }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: true,
+                })
+              ]}
+            >
               <CarouselContent>
                 {transformations.map((transformation, index) => (
                   <CarouselItem key={index}>
@@ -117,7 +127,7 @@ const Portfolio = () => {
             </Carousel>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
               <div className="text-center p-6 bg-card rounded-xl shadow-md hover:shadow-lg transition-shadow">
                 <div className="text-4xl font-bold text-primary mb-2">35+</div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wide">Years Experience</div>
@@ -134,7 +144,7 @@ const Portfolio = () => {
                 <div className="text-4xl font-bold text-primary mb-2">5★</div>
                 <div className="text-sm text-muted-foreground uppercase tracking-wide">Client Rating</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1,7 +1,13 @@
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TrustBadges from "@/components/TrustBadges";
+import StatsCounter from "@/components/StatsCounter";
+import Portfolio from "@/components/Portfolio";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import Process from "@/components/Process";
+import FloatingCTA from "@/components/FloatingCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -67,7 +73,14 @@ const Index = () => {
       <div className="min-h-screen">
         <Navbar />
         <Hero />
+        <TrustBadges />
+        <Portfolio />
+        <Testimonials />
+
+        <StatsCounter />
+        <FAQ />
         <Process />
+        <FloatingCTA />
         <Footer />
       </div>
     </>
