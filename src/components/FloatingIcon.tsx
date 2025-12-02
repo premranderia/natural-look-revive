@@ -8,8 +8,8 @@ interface FloatingIconProps {
 }
 
 const positionClasses = {
-  "top-left": "top-4 left-4 md:top-20 md:left-20",
-  "top-right": "top-4 right-4 md:top-20 md:right-20",
+  "top-left": "top-20 left-4 md:top-32 md:left-20",
+  "top-right": "top-20 right-4 md:top-32 md:right-20",
   "bottom-left": "bottom-4 left-4 md:bottom-20 md:left-20",
   "bottom-right": "bottom-4 right-4 md:bottom-20 md:right-20",
 };
@@ -22,26 +22,39 @@ const FloatingIcon = ({ Icon, position, delay = 0 }: FloatingIconProps) => {
       transition={{ duration: 0.6, delay }}
       className={`absolute ${positionClasses[position]} z-0 hidden sm:block`}
     >
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 5, -5, 0],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="relative"
-      >
+      <div className="relative">
         {/* Glow effect */}
-        <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl" />
+        <motion.div
+          animate={{
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute inset-0 bg-accent/20 rounded-full blur-xl"
+        />
 
         {/* Icon container */}
-        <div className="relative w-12 h-12 md:w-20 md:h-20 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 flex items-center justify-center shadow-lg">
-          <Icon className="w-6 h-6 md:w-10 md:h-10 text-primary/60" />
-        </div>
-      </motion.div>
+        <motion.div
+          className="relative w-8 h-8 md:w-12 md:h-12 rounded-full bg-card/80 backdrop-blur-sm border border-border/50 flex items-center justify-center shadow-lg"
+          animate={{
+            boxShadow: [
+              "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+              "0 10px 30px -3px rgba(249, 115, 22, 0.5)",
+              "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
+            ],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <Icon className="w-4 h-4 md:w-6 md:h-6 text-primary/60" />
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

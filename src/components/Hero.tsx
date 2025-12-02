@@ -158,7 +158,7 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 asChild
-                className="w-full text-sm md:text-base lg:text-lg px-6 md:px-8 py-4 md:py-6 bg-white/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-white/20 whitespace-nowrap"
+                className="w-full text-sm md:text-base lg:text-lg px-6 md:px-8 py-4 md:py-6 bg-white/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-white/20 shadow-2xl hover:shadow-accent/50 transition-all whitespace-nowrap"
               >
                 <Link to="/portfolio">
                   See Real Results

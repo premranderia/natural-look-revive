@@ -24,8 +24,8 @@ import Autoplay from "embla-carousel-autoplay";
 const Portfolio = () => {
   const transformations = [
     {
-      beforeImages: [before1, before2, before3],
-      afterImages: [after1, after2, after3],
+      beforeImages: [before1, before2],
+      afterImages: [after1, after2],
       category: "Men's Hair System"
     },
     {
@@ -63,7 +63,7 @@ const Portfolio = () => {
               opts={{ loop: true }}
               plugins={[
                 Autoplay({
-                  delay: 3000,
+                  delay: 4000,
                   stopOnInteraction: true,
                 })
               ]}
@@ -114,7 +114,7 @@ const Portfolio = () => {
                     </div>
 
                     {/* Category Badge */}
-                    <div className="text-center mt-6">
+                    <div className="text-center mt-6 mb-6">
                       <div className="bg-card px-6 py-2 rounded-full shadow-lg inline-block">
                         <span className="text-sm font-medium text-foreground">{transformation.category}</span>
                       </div>

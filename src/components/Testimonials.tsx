@@ -26,6 +26,16 @@ const testimonials = [
     quote: "Professional, discreet, and absolutely life-changing. The quality of their work is unmatched. I've been a client for over 5 years and wouldn't trust anyone else.",
     rating: 5,
   },
+  {
+    name: "John D.",
+    quote: "I've been using Natural Look for over 5 years now, and I've never been happier with my results. The quality of their work is unmatched, and I've never had any issues with them",
+    rating: 5,
+  },
+  {
+    name: "Emily W.",
+    quote: "Natural Look is the best hair restoration solution I've ever tried. The results are amazing, and I've never had any issues with them",
+    rating: 5,
+  },
 ];
 
 const Testimonials = () => {
@@ -86,7 +96,7 @@ const Testimonials = () => {
             opts={{ loop: true, align: "center" }}
             plugins={[
               Autoplay({
-                delay: 3000,
+                delay: 4000,
                 stopOnInteraction: true,
               })
             ]}

@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/natural-look-revive/",
+  base: "/natural-look-revive",
   server: {
     host: "::",
     port: 8080,
