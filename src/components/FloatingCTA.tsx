@@ -77,7 +77,7 @@ const FloatingCTA = () => {
                   >
                     <Calendar className="w-5 h-5" />
                   </motion.div>
-                  <span className="font-semibold">Book Free Consultation</span>
+                  <span className="font-semibold">Book Consultation</span>
                 </Link>
               </Button>
             </motion.div>
