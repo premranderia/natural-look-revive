@@ -133,4 +133,8 @@ All colors MUST be HSL.
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
+
+  .hover-shadow {
+    @apply shadow-2xl hover:shadow-accent/50 transition-all;
+  }
 }

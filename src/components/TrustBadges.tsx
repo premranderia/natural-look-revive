@@ -65,7 +65,7 @@ const TrustBadges = () => {
                 whileHover={{ scale: 1.05 }}
                 className="relative group"
               >
-                <div className="bg-card border border-border/50 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 h-full">
+                <div className="bg-card border border-border/50 rounded-xl p-6 text-center hover-shadow h-full">
                   <div className="flex justify-center mb-3">
                     <div className="relative">
                       <motion.div

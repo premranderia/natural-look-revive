@@ -62,7 +62,7 @@ const FloatingCTA = () => {
                 size="lg"
                 variant="hero"
                 asChild
-                className="shadow-2xl hover:shadow-primary/50 transition-all duration-300 pr-6"
+                className="hover-shadow pr-6"
               >
                 <Link to="/contact" className="flex items-center gap-2">
                   <motion.div

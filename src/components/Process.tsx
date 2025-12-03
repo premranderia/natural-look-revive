@@ -46,7 +46,7 @@ const Process = () => {
             return (
               <Card 
                 key={index}
-                className="relative overflow-hidden hover:shadow-lg transition-all duration-300 animate-fade-in border-accent/20"
+                className="relative overflow-hidden hover-shadow animate-fade-in border-accent/20"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardContent className="p-8">

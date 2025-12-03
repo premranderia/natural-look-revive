@@ -108,7 +108,7 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/1">
                   <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                    <Card className="relative hover:shadow-2xl transition-all duration-300 border-border/50 bg-card/80 backdrop-blur-md overflow-hidden">
+                    <Card className="relative hover-shadow border-border/50 bg-card/80 backdrop-blur-md overflow-hidden">
                       {/* Glassmorphic gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-50" />
 

@@ -30,7 +30,7 @@ const Hero = () => {
 
   // Typewriter effect for main headline - full text with loop
   const typewriter = useTypewriter({
-    words: ["Confidence. Restored Naturally."],
+    words: ["Confidence. Restored Naturally.", "A New Look. A New You.", "Hair That Matches Your Story", "Hair Loss Ends Here"],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -144,7 +144,7 @@ const Hero = () => {
                 variant="hero"
                 size="lg"
                 asChild
-                className="w-full text-sm md:text-base lg:text-lg px-6 md:px-8 py-4 md:py-6 shadow-2xl hover:shadow-accent/50 transition-all whitespace-nowrap"
+                className="w-full text-sm md:text-base lg:text-lg px-6 md:px-8 py-4 md:py-6 hover-shadow whitespace-nowrap"
               >
                 <Link to="/contact">
                   Book Consultation
@@ -158,7 +158,7 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 asChild
-                className="w-full text-sm md:text-base lg:text-lg px-6 md:px-8 py-4 md:py-6 bg-white/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-white/20 shadow-2xl hover:shadow-accent/50 transition-all whitespace-nowrap"
+                className="w-full text-sm md:text-base lg:text-lg px-6 md:px-8 py-4 md:py-6 bg-white/10 backdrop-blur-sm border-primary-foreground/30 text-primary-foreground hover:bg-white/20 hover-shadow whitespace-nowrap"
               >
                 <Link to="/portfolio">
                   See Real Results

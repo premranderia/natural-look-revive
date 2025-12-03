@@ -98,7 +98,7 @@ const StatsCounter = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover-shadow hover:-translate-y-1 overflow-hidden">
                   {/* Gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 

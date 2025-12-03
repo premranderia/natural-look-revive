@@ -42,7 +42,7 @@ const Products = () => {
               {products.map((product, index) => (
                 <div 
                   key={index} 
-                  className="bg-card p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border/50"
+                  className="bg-card p-6 rounded-xl hover-shadow hover:-translate-y-1 border border-border/50"
                 >
                   <h3 className="font-semibold text-lg text-foreground mb-2">{product.name}</h3>
                   <p className="text-muted-foreground text-sm">{product.description}</p>

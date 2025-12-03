@@ -117,7 +117,7 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <Card className="shadow-lg border-border/50 hover:shadow-xl transition-shadow">
+            <Card className="hover-shadow border-border/50">
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-primary" />
@@ -132,7 +132,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg border-border/50 hover:shadow-xl transition-shadow">
+            <Card className="hover-shadow border-border/50">
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-primary" />
@@ -149,7 +149,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg border-border/50 hover:shadow-xl transition-shadow">
+            <Card className="hover-shadow border-border/50">
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
@@ -166,7 +166,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg border-border/50 hover:shadow-xl transition-shadow">
+            <Card className="hover-shadow border-border/50">
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <Clock className="w-6 h-6 text-primary" />
