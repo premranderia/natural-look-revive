@@ -65,5 +65,5 @@ export const useTypewriter = ({
     }
   }, [currentText, currentWordIndex, isDeleting, words, loop, typeSpeed, deleteSpeed, delayBetweenWords, isComplete]);
 
-  return { text: currentText, isComplete };
+  return { text: currentText, isComplete, currentWordIndex };
 };

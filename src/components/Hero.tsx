@@ -17,7 +17,7 @@ const Hero = () => {
     "Undetectable results",
     "Custom designed for you",
     "35+ years of excellence",
-    "Natural confidence restored",
+    "Private & discreet service",
   ];
 
   // Cycle through background images
@@ -29,8 +29,37 @@ const Hero = () => {
   }, []);
 
   // Typewriter effect for main headline - full text with loop
+  const words = ["Confidence. Restored Naturally.", "Natural Results. Instant Impact.", "Hair That Matches Your Story.", "Your Transformation Starts Today."];
+  const highlightWords = ["Naturally", "Instant", "Story", "Transformation"]; // Words to highlight for each phrase
+  
+  // Helper function to highlight the first occurrence of a word in text
+  const highlightFirstOccurrence = (text: string, wordToHighlight: string) => {
+    const index = text.indexOf(wordToHighlight);
+    if (index === -1) return <span>{text}</span>;
+    
+    const before = text.substring(0, index);
+    const after = text.substring(index + wordToHighlight.length);
+    
+    return (
+      <>
+        {before}
+        <span className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text text-transparent">
+          {wordToHighlight}
+        </span>
+        {after}
+      </>
+    );
+  };
+  
+  // Find the longest phrase for space reservation
+  const longestPhraseIndex = words.reduce((longest, word, index) => 
+    word.length > words[longest].length ? index : longest, 0
+  );
+  const longestPhrase = words[longestPhraseIndex];
+  const longestHighlightWord = highlightWords[longestPhraseIndex];
+  
   const typewriter = useTypewriter({
-    words: ["Confidence. Restored Naturally.", "A New Look. A New You.", "Hair That Matches Your Story", "Hair Loss Ends Here"],
+    words,
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -83,28 +112,22 @@ const Hero = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-4 md:mb-6 relative"
+              className="mb-8 md:mb-10 lg:mb-12 relative"
             >
               {/* Invisible text to reserve full space */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight text-left invisible" aria-hidden="true">
-                Confidence. Restored{" "}
-                <span className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text text-transparent">
-                  Naturally.
-                </span>
+                {highlightFirstOccurrence(longestPhrase, longestHighlightWord)}
               </h1>
 
               {/* Visible typewriter text overlaid on top */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-primary-foreground leading-tight text-left absolute top-0 left-0">
-                {typewriter.text.split("Naturally").map((part, index) => (
-                  <span key={index}>
-                    {part}
-                    {index === 0 && typewriter.text.includes("Naturally") && (
-                      <span className="bg-gradient-to-r from-accent via-accent/80 to-accent bg-clip-text text-transparent">
-                        Naturally
-                      </span>
-                    )}
-                  </span>
-                ))}
+                {(() => {
+                  const currentHighlightWord = highlightWords[typewriter.currentWordIndex];
+                  if (currentHighlightWord && typewriter.text.includes(currentHighlightWord)) {
+                    return highlightFirstOccurrence(typewriter.text, currentHighlightWord);
+                  }
+                  return <span>{typewriter.text}</span>;
+                })()}
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ duration: 0.8, repeat: Infinity }}
@@ -116,7 +139,7 @@ const Hero = () => {
             </motion.div>
 
             {/* Rotating Benefits Text - Fixed Height */}
-            <div className="h-8 md:h-10 lg:h-12">
+            <div className="h-8 md:h-10 lg:h-12 mt-6 md:mt-8 lg:mt-20">
               <AnimatePresence mode="wait">
                 <motion.p
                   key={currentBenefitIndex}
