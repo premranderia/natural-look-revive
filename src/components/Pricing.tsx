@@ -4,19 +4,18 @@ import { Button } from "@/components/ui/button";
 
 const pricingPlans = [
   {
-    title: "New System Installation",
-    description: "Complete custom hair system package",
-    price: "Starting at $1,200",
+    title: "Repair Services",
+    description: "Expert repair & refitting",
+    price: "Starting at $75",
     features: [
-      "Private consultation",
-      "Custom hair system design",
-      "Professional installation",
-      "Styling & cut included",
-      "Maintenance instructions",
-      "Follow-up appointment",
+      "System inspection",
+      "Professional repairs",
+      "Refitting services",
+      "Color touch-ups",
+      "Base replacement",
+      "Quick turnaround",
     ],
-  },
-  {
+  },  {
     title: "Maintenance Plans",
     description: "Keep your system looking fresh",
     price: "$150 - $300/month",
@@ -29,18 +28,17 @@ const pricingPlans = [
       "Product discounts",
     ],
     popular: true,
-  },
-  {
-    title: "Repair Services",
-    description: "Expert repair & refitting",
-    price: "Starting at $75",
+  },  {
+    title: "New System Installation",
+    description: "Complete custom hair system package",
+    price: "Starting at $1,200",
     features: [
-      "System inspection",
-      "Professional repairs",
-      "Refitting services",
-      "Color touch-ups",
-      "Base replacement",
-      "Quick turnaround",
+      "Private consultation",
+      "Custom hair system design",
+      "Professional installation",
+      "Styling & cut included",
+      "Maintenance instructions",
+      "Follow-up appointment",
     ],
   },
 ];
