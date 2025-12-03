@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const pricingPlans = [
   {
@@ -53,7 +54,9 @@ const Pricing = () => {
     <section id="pricing" className="section-padding bg-background">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Transparent Pricing</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <SimpleTypewriter text="Transparent Pricing" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Quality service at fair prices. Schedule a consultation for personalized pricing.
           </p>

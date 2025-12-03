@@ -37,7 +37,7 @@ const Navbar = () => {
             className="hover:opacity-80 transition-opacity flex items-center gap-3"
           >
             <img src={logo} alt="Natural Look Logo" className="h-12 w-auto" />
-            <span className="text-xl font-bold text-foreground hidden lg:block">Natural Look</span>
+            <span className="text-xl font-bold text-foreground">Natural Look</span>
           </Link>
 
           {/* Desktop Navigation */}

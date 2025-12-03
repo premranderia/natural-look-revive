@@ -1,4 +1,5 @@
 import { Award, GraduationCap, Heart } from "lucide-react";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const AboutUs = () => {
   const credentials = [
@@ -21,7 +22,8 @@ const AboutUs = () => {
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            About Us
+            <SimpleTypewriter text="About Us" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
+
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Meet the Expert Behind Natural Look

@@ -20,6 +20,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const Portfolio = () => {
   const transformations = [
@@ -49,7 +50,9 @@ const Portfolio = () => {
     <section id="portfolio" className="section-padding bg-background">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">See the Natural Look Difference</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <SimpleTypewriter text="See the Natural Look Difference" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Real transformations, real confidence. See how we've helped our clients restore their natural look.
           </p>

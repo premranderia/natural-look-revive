@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -32,7 +33,9 @@ const Contact = () => {
     <section id="contact" className="section-padding bg-background">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Get in Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <SimpleTypewriter text="Get in Touch" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Schedule your private consultation today. We're here to answer all your questions.
           </p>

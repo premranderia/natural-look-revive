@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const naturalLookServices = [
   { name: "NLI System Cut-in (New System)", price: "$150", note: "(Full Service Included) (Color/Tint not included)" },
@@ -35,7 +36,9 @@ const Services = () => {
     <section id="services" className="section-padding bg-gradient-to-b from-background to-muted">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Services & Pricing</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight">
+            <SimpleTypewriter text="Our Services & Pricing" className="text-4xl md:text-5xl font-bold text-foreground" />
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Professional hair replacement solutions for men and women
           </p>

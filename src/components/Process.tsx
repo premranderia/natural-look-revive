@@ -2,6 +2,7 @@ import { MessageSquare, Ruler, Scissors } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const Process = () => {
 
@@ -31,7 +32,8 @@ const Process = () => {
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Our Process
+            <SimpleTypewriter text="Our Process" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
+            
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             From consultation to confidence — here's how we create your perfect Natural Look.

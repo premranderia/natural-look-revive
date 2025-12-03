@@ -1,4 +1,5 @@
 import productsDisplay from "@/assets/products-display.jpg";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const products = [
   { name: "Premium Shampoo", description: "Gentle cleansing for hair systems" },
@@ -14,7 +15,9 @@ const Products = () => {
     <section id="products" className="section-padding bg-gradient-to-b from-muted to-background">
       <div className="container-custom">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Premium Hair Care Products</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <SimpleTypewriter text="Premium Hair Care Products" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Professional-grade products to maintain your hair system at home
           </p>

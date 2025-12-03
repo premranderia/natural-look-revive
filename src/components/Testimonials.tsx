@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const testimonials = [
   {
@@ -79,7 +80,9 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">What Our Clients Say</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <SimpleTypewriter text="What Our Clients Say" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
+          </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our satisfied clients have to say.
           </p>

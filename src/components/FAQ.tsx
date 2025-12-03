@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SimpleTypewriter from "./ui/SimpleTypewriter";
 
 const FAQ = () => {
   const faqs = [
@@ -45,7 +46,7 @@ const FAQ = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Frequently Asked Questions
+            <SimpleTypewriter text="Frequently Asked Questions" className="text-4xl md:text-5xl font-bold text-foreground mb-4" />
           </h2>
           <p className="text-lg text-muted-foreground">
             Have questions? We've got answers.
