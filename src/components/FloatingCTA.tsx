@@ -84,7 +84,7 @@ const FloatingCTA = () => {
 
             {/* Pulsing ring effect */}
             <motion.div
-              className="absolute inset-0 rounded-full bg-primary/20"
+              className="absolute inset-0 rounded-full bg-primary/20 pointer-events-none"
               animate={{
                 scale: [1, 1.3, 1],
                 opacity: [0.5, 0, 0.5],
